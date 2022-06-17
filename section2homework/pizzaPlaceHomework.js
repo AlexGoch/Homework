@@ -14,7 +14,7 @@ if (numberOfToppings < 10) {
 } else if (numberOfToppings >= 10) {
   console.log("A whole lot of pizza.");
 }
-//Use a loop to print all of the even numbers from 1 to numberOfToppings (or 10)
+//Use a loop to print all of the even numbers from 1 to numberOfToppings
 for (i=1;i<=numberOfToppings;i++){
   if (i%2==0){
     console.log(i);
