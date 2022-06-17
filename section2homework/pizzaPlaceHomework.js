@@ -1,4 +1,4 @@
-// Inside your JS File, create two variable: pizzaPlace and numberOfToppings.
+// Inside your JS File, create two variables: pizzaPlace and numberOfToppings.
 // Have the variables reference the name of your Pizza Place and the number of toppings your Pizza Place offers.
 const pizzaPlace = "Alexander's Pizza Place";
 let numberOfToppings = 12;
