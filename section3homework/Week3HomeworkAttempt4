@@ -22,7 +22,6 @@ function getPizzaOrder(size,crust,...toppings) {
   let pizzaArr =[size,crust,toppings];
   return console.log(`One ${pizzaArr[0], pizzaArr[1]} crust pizza with ${pizzaArr[2]} coming up!`),pizzaArr;
   }
-  getPizzaOrder('large', 'thin', 'Mushroom', 'Spinach', 'Feta', 'Onion', 'Tomato');
 
 /* 4. create a preparePizza function that:
 -has an array as its parameter with three items: a size, a crust, and a list of toppings
@@ -38,7 +37,6 @@ function preparePizza(arrParam){
   console.log("...cooking pizza...");
   return pizzaObj;
 }
-preparePizza(getPizzaOrder('large','thin','Mushroom','Spinach','Feta','Onion','Tomato'));
 
 /* 5. Create a servePizza function that:
 -has a parameter of a pizza Object
@@ -47,10 +45,9 @@ preparePizza(getPizzaOrder('large','thin','Mushroom','Spinach','Feta','Onion','T
 
 function servePizza(objParam) {
   let pizzaObj = objParam;
-  console.log("Order up! Here's your "+objParam.size+" "+objParam.crust+" crust pizza with "+objParam.toppings+"...enjoy!");
+  console.log(`Order up! Here's your ${objParam.size, objParam.crust} crust pizza with ${objParam.toppings}...enjoy!`)
   return pizzaObj;
 }
-servePizza(preparePizza(getPizzaOrder('large','thin','Mushroom','Spinach','Feta','Onion','Tomato')));
 
 /* 6. Call each function and (starting with preparePizza) use the returned value from the previous function as its input.
 No hard-coding necessary in this part. */
