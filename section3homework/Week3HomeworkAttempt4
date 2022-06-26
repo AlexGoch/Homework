@@ -1,17 +1,17 @@
 // 1. Create an array of pizzaToppings with at least four different toppings
 
-const pizzaToppings = [' Mushroom', ' Spinach', ' Feta', ' Onion', ' Tomato'];
+const pizzaToppings = ['Mushroom', 'Spinach', 'Feta', 'Onion', 'Tomato'];
 
 // 2. Create a greetCustomer function that prints a message that welcomes a guest, then informs them of the available toppings by looping over pizzaToppings
 
-function greetCustomer() {
-  let result = ''
-  for (let name of pizzaToppings) {
-  result = name+result;
-  }
-  console.log(`Welcome to Alexander's Pizza Place. Our toppings today are: ${result}.`);
-  }
-  greetCustomer();
+function greetCustomer () {
+  toppings = ""
+  for(let i of pizzaToppings)
+  toppings = toppings + " " + i;
+  return (`Welcome to Alexander's Pizza Place. Our toppings today are:${toppings}`);
+
+}
+greetCustomer();
 
 /* 3. Create a getPizzaOrder function that:
 -Has the parameters: size, crust, and in indefinite amount of toppings as inputs
@@ -19,13 +19,10 @@ function greetCustomer() {
 -Outputs a list with the size, crust, and toppings */
 
 function getPizzaOrder(size,crust,...toppings) {
-
-let pizzaArr =[size,crust,toppings];
-console.log("One "+pizzaArr[0]+" "+pizzaArr[1]+ " crust pizza with "+pizzaArr[2]+" coming up!");
-return pizzaArr;
-}
-getPizzaOrder('large','thin','Mushroom','Spinach','Feta','Onion','Tomato');
-
+  let pizzaArr =[size,crust,toppings];
+  return console.log(`One ${pizzaArr[0], pizzaArr[1]} crust pizza with ${pizzaArr[2]} coming up!`),pizzaArr;
+  }
+  getPizzaOrder('large', 'thin', 'Mushroom', 'Spinach', 'Feta', 'Onion', 'Tomato');
 
 /* 4. create a preparePizza function that:
 -has an array as its parameter with three items: a size, a crust, and a list of toppings
@@ -42,7 +39,6 @@ function preparePizza(arrParam){
   return pizzaObj;
 }
 preparePizza(getPizzaOrder('large','thin','Mushroom','Spinach','Feta','Onion','Tomato'));
-
 
 /* 5. Create a servePizza function that:
 -has a parameter of a pizza Object
