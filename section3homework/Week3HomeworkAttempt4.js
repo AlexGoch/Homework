@@ -4,13 +4,17 @@ const pizzaToppings = ['Mushroom', 'Spinach', 'Feta', 'Onion', 'Tomato'];
 
 // 2. Create a greetCustomer function that prints a message that welcomes a guest, then informs them of the available toppings by looping over pizzaToppings
 
-function greetCustomer () {
-  toppings = ""
-  for(let i of pizzaToppings)
-  toppings = toppings + " " + i;
-  return console.log(`Welcome to Alexander's Pizza Place. Our toppings today are:${toppings}`);
 
-}
+function greetCustomer() {
+  let toppings = "";
+  for (let element of pizzaToppings) {
+    toppings += element + " "
+  };
+  return console.log(`Welcome to Alexander's Pizza! Our toppings today are: ${toppings}`);
+};
+
+
+
 
 /* 3. Create a getPizzaOrder function that:
 -Has the parameters: size, crust, and in indefinite amount of toppings as inputs
@@ -35,7 +39,7 @@ function preparePizza(arrParam){
     size: arrParam[0],
     crust: arrParam[1],
     toppings: arrParam[2],
-  };
+  }
   console.log("...cooking pizza...");
   return pizzaObj;
 }
@@ -49,7 +53,7 @@ function preparePizza(arrParam){
 
 function servePizza(objParam) {
   let pizzaObj = objParam;
-  console.log(`Order up! Here's your ${objParam.size, objParam.crust} crust pizza with ${objParam.toppings}...enjoy!`)
+  console.log(`Order up! Here's your ${objParam.size} ${objParam.crust} crust pizza with ${objParam.toppings}...enjoy!`);
   return pizzaObj;
 }
 
@@ -71,7 +75,7 @@ servePizza(preparePizza(getPizzaOrder('large','thin','Mushroom','Spinach','Feta'
 You could create a listToppings function that stores the functionality, and call the function each time we list toppings in a function.
 i.e. "Our toppings are a, b, and c." instead of "Our toppings are a, b, c" */
 
-const pizzaToppings = ['Mushroom', 'Spinach', 'Feta', 'Onion', 'Tomato'];
+//const pizzaToppings = ['Mushroom', 'Spinach', 'Feta', 'Onion', 'Tomato'];
 
 function listToppings(toppingsArr) {
 toppingsArr.splice(toppingsArr.length-1,0,'and');
@@ -85,11 +89,11 @@ Alter servePizza in a similar way to fix its grammar when serving a "plain" chee
 
 function getPizzaOrder(size,crust,...toppings) {
   let pizzaArr =[size,crust,toppings];
-  if (pizzaArr.includes[2] == true){
-    console.log(`One ${pizzaArr[0], pizzaArr[1]} crust pizza with ${pizzaArr[2]} coming up!`), pizzaArr;
+  if (pizzaArr.length == 3){
+   return console.log(`One ${pizzaArr[0], pizzaArr[1]} crust pizza with ${pizzaArr[2]} coming up!`), pizzaArr;
   }
-  else if (pizzaArr.includes[2] == false) {
-    console.log(`One ${pizzaArr[0], pizzaArr[1]} crust pizza with cheese coming up!`), pizzaArr;
+  else if (pizzaArr.length == 2) {
+    return console.log(`One ${pizzaArr[0], pizzaArr[1]} crust pizza with cheese coming up!`), pizzaArr;
   }
 
   }
