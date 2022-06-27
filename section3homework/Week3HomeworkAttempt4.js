@@ -53,8 +53,18 @@ function servePizza(objParam) {
 /* 6. Call each function and (starting with preparePizza) use the returned value from the previous function as its input.
 No hard-coding necessary in this part. */
 
-greetCustomer();
-servePizza(preparePizza(getPizzaOrder('large','thick','Mushroom','Spinach','Feta','Onion','Tomato')));
+  // call greetCustomer
+  greetCustomer();
+
+  // call getPizzaOrder with parameter inputs
+  getPizzaOrder('large','thick','Mushroom','Spinach','Feta','Onion','Tomato');
+
+  // call preparePizza with callback from getPizzaOrder
+  preparePizza(getPizzaOrder('large','thick','Mushroom','Spinach','Feta','Onion','Tomato'));
+
+  // call servePizza with callbacks from preparePizza and getPizzaOrder
+  servePizza(preparePizza(getPizzaOrder('large','thick','Mushroom','Spinach','Feta','Onion','Tomato')));
+
 
 // bonus answers below are work-in-progress and don't function correctly
 
