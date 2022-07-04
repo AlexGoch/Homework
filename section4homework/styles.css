@@ -1,0 +1,77 @@
+/* color palette:
+#d6cbd3
+#eca1a6
+#bdcebe
+#ada397
+*/
+
+
+body {
+    border: 5px transparent #ada397;
+    background-color: #d6cbd3;
+    padding: 50px;
+}
+
+
+
+#pageHeader {
+    font-size: 40px;
+    text-align: center;
+    font-family: cursive;
+}
+
+#intro {
+    font-size: 20px;
+    text-align: center;
+}
+
+#catStory {
+    font-size: 20px;
+    text-align: center;
+    ;
+}
+
+.catPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 50%;
+    width: 400px;
+    height: 380px;
+    padding: 20px;
+
+}
+
+.catIntro {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    border: 10px solid #ada397;
+    text-shadow:2px 2px #eca1a6;
+}
+
+.catBio {
+    display: table;
+    margin: auto;
+    padding: 10px;
+    font-size: 20px;
+    font-family: cambria;
+
+}
+
+.socialLinks > li {
+    font-size: 40px;
+    padding: 10px;
+}
+
+#footer > h3 {
+    font-size: 40px;
+}
+
+
+
+
+
+
+
